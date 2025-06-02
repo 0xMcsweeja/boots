@@ -1,5 +1,7 @@
 # porto bootstrap test
 
+![boots](boots.png)
+
 test boostrapping together a proto foundry stack for pocs 
 
 ## Tech Stack
