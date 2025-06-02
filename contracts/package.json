@@ -1,0 +1,12 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "deploy:local": "forge script script/DeployAll.s.sol:DeployAll --rpc-url localhost --broadcast",
+    "anvil": "anvil --host 0.0.0.0",
+    "clean": "forge clean"
+  }
+}

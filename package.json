@@ -1,0 +1,27 @@
+{
+  "name": "porto-bootstrap-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Porto bootstrap test application with Wagmi and Foundry",
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "dev:contracts": "pnpm --filter contracts anvil",
+    "dev:full": "concurrently \"pnpm dev:contracts\" \"sleep 3 && pnpm dev\"",
+    "build": "pnpm --filter contracts build && pnpm --filter frontend build",
+    "test": "pnpm --filter contracts test && pnpm --filter frontend test",
+    "test:contracts": "pnpm --filter contracts test",
+    "deploy:local": "pnpm --filter contracts deploy:local",
+    "deploy:sepolia": "pnpm --filter contracts deploy:sepolia",
+    "typecheck": "pnpm --filter frontend typecheck",
+    "lint": "pnpm --filter frontend lint && pnpm --filter contracts lint",
+    "lint:fix": "pnpm --filter frontend lint:fix && pnpm --filter contracts lint:fix",
+    "format": "pnpm --filter frontend format && pnpm --filter contracts format",
+    "format:check": "pnpm --filter frontend format:check && pnpm --filter contracts format:check",
+    "clean": "pnpm --filter '*' clean"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "concurrently": "^8.2.2"
+  },
+  "packageManager": "pnpm@9.0.0"
+}
